@@ -27,15 +27,15 @@ export function MasterclassSection() {
       className="scroll-mt-20 bg-brand-cream py-20 text-neutral-950 sm:py-24 lg:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-          <div className="max-w-4xl">
+        <div className="section-intro">
+          <div>
             <p className="text-sm font-black uppercase text-brand-red">Transmission & expertise</p>
-            <h2 className="mt-3 font-heading text-4xl font-black leading-tight uppercase sm:text-5xl lg:text-6xl">
+            <h2 className="section-title font-black">
               4 masterclass pour
               <span className="block text-brand-red">entreprendre avec méthode</span>
             </h2>
           </div>
-          <p className="max-w-sm text-lg leading-8 text-neutral-600">
+          <p className="section-description text-neutral-600">
             Des experts répondent aux questions concrètes qui accompagnent la
             croissance d’une entreprise en RDC.
           </p>

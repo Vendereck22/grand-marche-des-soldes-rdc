@@ -42,19 +42,19 @@ export function PartnersSection() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
-          <div>
+          <div className="section-intro max-w-none">
             <p className="text-sm font-black uppercase text-brand-red">Construisons ensemble</p>
-            <h2 className="mt-3 max-w-3xl font-heading text-4xl font-black leading-tight uppercase sm:text-5xl lg:text-6xl">
+            <h2 className="section-title font-black">
               Des partenaires au cœur
               <span className="block text-brand-red">de l’impact</span>
             </h2>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-800/75">
+            <p className="section-description text-neutral-800/75">
               Le Grand Marché des Soldes ouvre un terrain de collaboration aux
               organisations qui veulent soutenir le commerce local, gagner en
               visibilité et créer des liens concrets avec le public.
             </p>
 
-            <div className="mt-10 grid border-l border-t border-neutral-950/15 sm:grid-cols-2">
+            <div className="mt-10 grid w-full border-l border-t border-neutral-950/15 sm:grid-cols-2">
               {PARTNER_PROFILES.map(({ icon: Icon, number, title, description }) => (
                 <article
                   key={title}
@@ -91,7 +91,7 @@ export function PartnersSection() {
             </div>
 
             <Link
-              href="mailto:contact@newbell-agency.com?subject=Demande%20du%20dossier%20partenariat%20-%20Grand%20March%C3%A9%20des%20Soldes"
+              href="/participer?type=partner"
               className="mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-brand-yellow px-6 font-bold text-neutral-950 transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white sm:w-auto"
             >
               Devenir partenaire

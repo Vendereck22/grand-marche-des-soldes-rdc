@@ -65,10 +65,10 @@ export function HeroSection() {
             className="mt-7 flex flex-col gap-3 sm:flex-row"
           >
             <Link
-              href="#exhibitors"
+              href="/participer?type=exhibitor"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-brand-yellow px-6 text-base font-bold text-neutral-950 transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
-              Devenir exposant
+              Rréserver votre stand
               <ArrowRight className="size-5" aria-hidden="true" />
             </Link>
             <Link

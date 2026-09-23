@@ -30,14 +30,14 @@ export function FinalCtaSection() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
-              href="mailto:contact@newbell-agency.com?subject=Demande%20du%20dossier%20exposant%20-%20Grand%20March%C3%A9%20des%20Soldes"
+              href="/participer?type=exhibitor"
               className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-brand-red px-5 font-bold text-white transition-colors hover:bg-neutral-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-red"
             >
               Devenir exposant
               <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
             <Link
-              href="mailto:contact@newbell-agency.com?subject=Participation%20-%20Grand%20March%C3%A9%20des%20Soldes"
+              href="/participer?type=participant"
               className="inline-flex h-11 items-center justify-center rounded-md border border-neutral-950/25 px-5 font-bold transition-colors hover:bg-white"
             >
               Participer

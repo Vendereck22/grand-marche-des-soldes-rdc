@@ -9,7 +9,7 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-geist-sans);
+  --font-heading: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   --color-brand-red: var(--brand-red);
   --color-brand-red-dark: var(--brand-red-dark);
   --color-brand-yellow: var(--brand-yellow);
@@ -136,9 +136,41 @@
     @apply font-sans;
     scroll-behavior: smooth;
   }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-heading);
+    letter-spacing: 0;
+  }
 }
 
 @layer utilities {
+  .section-intro {
+    display: flex;
+    max-width: 48rem;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .section-title {
+    margin-top: 0.75rem;
+    max-width: 48rem;
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    line-height: 0.96;
+    letter-spacing: 0;
+    text-wrap: balance;
+    text-transform: uppercase;
+  }
+
+  .section-description {
+    margin-top: 1.5rem;
+    max-width: 42rem;
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+
   .brand-ribbon::before,
   .brand-ribbon::after {
     position: absolute;

@@ -48,7 +48,6 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        {/* Logo */}
         <Link
           href="/"
           className="group flex items-center gap-3 rounded-lg focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-red-600"
@@ -107,19 +106,8 @@ export function Navbar() {
 
         {/* Actions & CTA Desktop */}
         <div className="hidden items-center gap-3 md:flex">
-          <Link
-            href="#contact"
-            className={cn(
-              "hidden rounded-full px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-2 xl:inline-flex",
-              isScrolled
-                ? "text-neutral-600 hover:text-neutral-950 focus-visible:ring-red-600"
-                : "text-white/85 hover:text-brand-yellow focus-visible:ring-brand-yellow",
-            )}
-          >
-            Participer
-          </Link>
           <Button
-            render={<Link href="#exhibitors" />}
+            render={<Link href="/participer?type=exhibitor" />}
             nativeButton={false}
             className={cn(
               "h-10 rounded-full px-5 text-sm font-semibold shadow-xs transition-all hover:shadow-md focus-visible:ring-2 active:scale-95",
@@ -128,24 +116,24 @@ export function Navbar() {
                 : "bg-brand-yellow text-neutral-950 hover:bg-white focus-visible:ring-white",
             )}
           >
-            Devenir exposant
+            Réserver un stand
           </Button>
         </div>
 
         {/* Bouton Hamburger & Menu Mobile */}
         <div className="flex items-center gap-2 lg:hidden">
           <Button
-            render={<Link href="#exhibitors" />}
+            render={<Link href="/participer?type=exhibitor" />}
             nativeButton={false}
             size="sm"
             className={cn(
-              "h-9 rounded-full px-3.5 text-xs font-semibold transition-colors sm:text-sm md:hidden",
+              "hidden h-9 rounded-full px-3.5 text-sm font-semibold transition-colors sm:inline-flex md:hidden",
               isScrolled
                 ? "bg-red-600 text-white hover:bg-red-700"
                 : "bg-brand-yellow text-neutral-950 hover:bg-white",
             )}
           >
-            Exposer
+            Réserver un stand
           </Button>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -213,22 +201,20 @@ export function Navbar() {
                 ))}
               </nav>
 
-              {/* CTAs Mobile */}
+              {/* CTA Mobile */}
               <div className="flex flex-col gap-2.5 border-t border-neutral-100 pt-4">
                 <Button
-                  render={<Link href="#exhibitors" onClick={() => setIsOpen(false)} />}
+                  render={
+                    <Link
+                      href="/participer?type=exhibitor"
+                      onClick={() => setIsOpen(false)}
+                    />
+                  }
                   nativeButton={false}
                   className="h-11 w-full rounded-full bg-red-600 text-sm font-semibold text-white shadow-xs hover:bg-red-700"
                 >
-                  Devenir exposant
+                  Réserver un stand
                 </Button>
-                <Link
-                  href="#contact"
-                  onClick={() => setIsOpen(false)}
-                  className="inline-flex h-10 w-full items-center justify-center rounded-full border border-neutral-200 text-sm font-medium text-neutral-700 transition-colors hover:bg-neutral-50"
-                >
-                  Participer à l&apos;événement
-                </Link>
               </div>
             </SheetContent>
           </Sheet>

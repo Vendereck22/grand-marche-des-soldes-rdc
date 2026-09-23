@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Grand Marché des Soldes RDC
 
-## Getting Started
+Landing page et système de gestion des inscriptions pour le Grand Marché des Soldes RDC.
 
-First, run the development server:
+## Démarrage local
 
 ```bash
+npm install
+npx prisma generate
+npx prisma db push
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site est disponible sur [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Parcours disponibles
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `/` : landing page de l’événement
+- `/participer` : formulaire participant, exposant ou partenaire
+- `/admin/connexion` : connexion à l’administration
+- `/admin` : tableau de bord des inscriptions
+- `/admin/export` : export CSV protégé
 
-## Learn More
+## Variables d’environnement
 
-To learn more about Next.js, take a look at the following resources:
+Créer un fichier `.env` avec les valeurs suivantes :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+DATABASE_URL="postgresql://utilisateur:mot-de-passe@hote/base?sslmode=require"
+ADMIN_EMAIL="contact@newbell-agency.com"
+ADMIN_PASSWORD="mot-de-passe-fort"
+ADMIN_SESSION_SECRET="secret-aleatoire-long"
+NEXT_PUBLIC_SITE_URL="http://localhost:3000"
+CONTACT_EMAIL="contact@newbell-agency.com"
+CONTACT_PHONE="+243892556950"
+CONTACT_WEBSITE="https://www.newbell-agency.com"
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Le fichier `.env` et les fichiers générés par Prisma ne doivent pas être versionnés.
 
-## Deploy on Vercel
+## Mise en production
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Le projet utilise PostgreSQL. En production, configurer `DATABASE_URL` avec la connexion Neon, remplacer `NEXT_PUBLIC_SITE_URL` par le domaine public, puis appliquer les migrations Prisma avec `npx prisma migrate deploy`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Vérifications
+
+```bash
+npm run lint
+npm run build
+```

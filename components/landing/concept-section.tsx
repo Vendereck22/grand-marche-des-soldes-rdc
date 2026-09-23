@@ -26,14 +26,14 @@ export function ConceptSection() {
       className="brand-ribbon relative isolate scroll-mt-20 overflow-hidden bg-[#f3f3f1] py-20 text-neutral-900 sm:py-24 lg:py-28"
     >
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:px-8">
-        <div className="relative z-10 max-w-2xl">
+        <div className="section-intro relative z-10">
           <p className="text-sm font-black uppercase text-brand-red">Le concept</p>
-          <h2 className="mt-3 font-heading text-4xl font-black leading-tight text-balance uppercase sm:text-5xl lg:text-6xl">
+          <h2 className="section-title font-black">
             Bien plus qu’une
             <span className="block text-brand-red">foire commerciale</span>
           </h2>
 
-          <p className="mt-6 text-lg leading-8 text-neutral-700">
+          <p className="section-description text-neutral-700">
             Le Grand Marché des Soldes RDC est un salon commercial de grande
             envergure pensé pour valoriser les produits, les services et le
             savoir-faire des entrepreneurs congolais.
@@ -44,7 +44,7 @@ export function ConceptSection() {
             la vente et les bonnes affaires.
           </p>
 
-          <div className="mt-8 grid gap-5">
+          <div className="mt-8 grid w-full gap-5">
             {CONCEPT_POINTS.map(({ icon: Icon, title, description }) => (
               <div key={title} className="flex gap-4">
                 <div className="flex size-11 shrink-0 items-center justify-center rounded-md bg-brand-red text-white">

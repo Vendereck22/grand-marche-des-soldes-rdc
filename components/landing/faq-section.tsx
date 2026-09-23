@@ -34,7 +34,7 @@ const FAQ_ITEMS = [
       "Vous pouvez demander le dossier exposant par e-mail. L’équipe vous transmettra les formats d’espace, les conditions de participation et les prochaines étapes.",
     link: {
       label: "Demander le dossier exposant",
-      href: "mailto:contact@newbell-agency.com?subject=Demande%20du%20dossier%20exposant%20-%20Grand%20March%C3%A9%20des%20Soldes",
+      href: "/participer?type=exhibitor",
     },
   },
   {
@@ -43,7 +43,7 @@ const FAQ_ITEMS = [
       "Les institutions, entreprises, médias et partenaires techniques peuvent construire une collaboration adaptée à leurs objectifs de visibilité et d’impact.",
     link: {
       label: "Demander le dossier partenariat",
-      href: "mailto:contact@newbell-agency.com?subject=Demande%20du%20dossier%20partenariat%20-%20Grand%20March%C3%A9%20des%20Soldes",
+      href: "/participer?type=partner",
     },
   },
 ] as const;
@@ -55,16 +55,16 @@ export function FaqSection() {
       className="scroll-mt-20 bg-brand-cream py-20 text-neutral-950 sm:py-24 lg:py-28"
     >
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20 lg:px-8">
-        <div className="lg:sticky lg:top-28 lg:self-start">
+        <div className="section-intro lg:sticky lg:top-28 lg:self-start">
           <div className="flex size-12 items-center justify-center bg-brand-red text-white">
             <HelpCircle className="size-6" aria-hidden="true" />
           </div>
           <p className="mt-7 text-sm font-black uppercase text-brand-red">Questions fréquentes</p>
-          <h2 className="mt-3 font-heading text-4xl font-black leading-tight uppercase sm:text-5xl lg:text-6xl">
+          <h2 className="section-title font-black">
             Tout savoir
             <span className="block text-brand-red">avant le marché</span>
           </h2>
-          <p className="mt-6 max-w-md text-lg leading-8 text-neutral-600">
+          <p className="section-description text-neutral-600">
             Retrouvez les réponses essentielles pour préparer votre visite,
             exposer votre marque ou rejoindre l’événement comme partenaire.
           </p>

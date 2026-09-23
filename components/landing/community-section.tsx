@@ -62,18 +62,18 @@ export function CommunitySection() {
             </div>
           </div>
 
-          <div>
+          <div className="section-intro max-w-none">
             <p className="text-sm font-black uppercase text-brand-red">Notre communauté</p>
-            <h2 className="mt-3 font-heading text-4xl font-black leading-tight uppercase sm:text-5xl lg:text-6xl">
+            <h2 className="section-title font-black">
               Un réseau qui crée
               <span className="block text-brand-red">des connexions durables</span>
             </h2>
-            <p className="mt-5 max-w-xl text-lg leading-8 text-neutral-600">
+            <p className="section-description text-neutral-600">
               Le Grand Marché des Soldes s’appuie sur une communauté déjà engagée,
               réunie autour du partage d’expérience et des opportunités d’affaires.
             </p>
 
-            <div className="mt-9 border-t border-neutral-900/10">
+            <div className="mt-9 w-full border-t border-neutral-900/10">
               {COMMUNITY_STATS.map(({ icon: Icon, value, title, description }) => (
                 <article
                   key={title}

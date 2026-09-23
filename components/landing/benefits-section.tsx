@@ -35,13 +35,13 @@ export function BenefitsSection() {
     <section id="benefits" className="scroll-mt-20 overflow-hidden">
       <div className="grid lg:grid-cols-[0.82fr_1.18fr]">
         <div className="brand-ribbon relative isolate min-h-[42rem] overflow-hidden bg-brand-red px-4 pb-0 pt-16 text-white sm:px-8 sm:pt-20 lg:min-h-[52rem] lg:px-12 xl:px-[max(3rem,calc((100vw-80rem)/2))]">
-          <div className="relative z-20 mx-auto max-w-xl lg:ml-auto lg:max-w-md">
+          <div className="section-intro relative z-20 mx-auto lg:ml-auto lg:max-w-md">
             <p className="text-sm font-black uppercase text-brand-yellow">Pourquoi participer ?</p>
-            <h2 className="mt-3 font-heading text-4xl font-black leading-tight uppercase sm:text-5xl">
+            <h2 className="section-title font-black">
               Une occasion de
               <span className="block text-brand-yellow">grandir ensemble</span>
             </h2>
-            <p className="mt-5 max-w-md text-lg leading-8 text-white/80">
+            <p className="section-description text-white/80">
               Un événement pensé pour créer des opportunités concrètes, aussi
               bien pour ceux qui vendent que pour ceux qui achètent.
             </p>

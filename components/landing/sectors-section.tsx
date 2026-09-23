@@ -45,13 +45,17 @@ export function SectorsSection() {
       className="brand-ribbon relative isolate scroll-mt-20 overflow-hidden bg-brand-red py-20 text-white sm:py-24 lg:py-28"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
-          <div className="max-w-3xl">
+        <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+          <div className="section-intro">
             <p className="text-sm font-black uppercase text-brand-yellow">Secteurs attendus</p>
-            <h2 className="mt-3 font-heading text-4xl font-black leading-tight uppercase sm:text-5xl lg:text-6xl">
+            <h2 className="section-title font-black">
               Les talents qui font
               <span className="block text-brand-yellow">bouger l’économie</span>
             </h2>
+            <p className="section-description text-white/80">
+              Une sélection représentative des savoir-faire, produits et services
+              qui animent le marché congolais.
+            </p>
           </div>
           <div className="max-w-sm border-l-4 border-brand-yellow pl-5">
             <strong className="font-heading text-3xl font-black text-brand-yellow">10+</strong>

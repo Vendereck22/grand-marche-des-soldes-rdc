@@ -31,10 +31,7 @@ function AnimatedValue({
   const [progress, setProgress] = useState(reduceMotion ? 1 : 0);
 
   useEffect(() => {
-    if (!isInView || reduceMotion) {
-      if (reduceMotion) setProgress(1);
-      return;
-    }
+    if (!isInView || reduceMotion) return;
 
     const duration = 1400;
     const startedAt = performance.now();
@@ -51,8 +48,9 @@ function AnimatedValue({
     return () => cancelAnimationFrame(frame);
   }, [isInView, reduceMotion]);
 
-  const currentTo = Math.round(to * progress);
-  const currentFrom = Math.round(from * progress);
+  const effectiveProgress = reduceMotion ? 1 : progress;
+  const currentTo = Math.round(to * effectiveProgress);
+  const currentFrom = Math.round(from * effectiveProgress);
   const finalLabel = range
     ? `${formatNumber(from)} à ${formatNumber(to)}${suffix}`
     : `${formatNumber(to)}${suffix}`;

@@ -30,13 +30,13 @@ export function ExhibitorsSection() {
     <section id="exhibitors" className="scroll-mt-20 bg-white">
       <div className="grid lg:grid-cols-[0.92fr_1.08fr]">
         <div className="brand-ribbon relative isolate overflow-hidden bg-brand-red px-4 py-20 text-white sm:px-8 sm:py-24 lg:flex lg:min-h-[52rem] lg:items-center lg:px-12 xl:pl-[max(3rem,calc((100vw-80rem)/2))]">
-          <div className="relative z-10 max-w-2xl lg:max-w-xl">
+          <div className="section-intro relative z-10 lg:max-w-xl">
             <p className="text-sm font-black uppercase text-brand-yellow">Devenir exposant</p>
-            <h2 className="mt-3 font-heading text-4xl font-black leading-tight uppercase sm:text-5xl lg:text-6xl">
+            <h2 className="section-title font-black">
               Votre marque mérite
               <span className="block text-brand-yellow">sa place au marché</span>
             </h2>
-            <p className="mt-6 text-lg leading-8 text-white/85">
+            <p className="section-description text-white/85">
               Rejoignez les entreprises, entrepreneurs et créateurs qui feront
               du Grand Marché des Soldes le rendez-vous commercial de la fin d’année.
             </p>
@@ -52,7 +52,7 @@ export function ExhibitorsSection() {
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="mailto:contact@newbell-agency.com?subject=Demande%20du%20dossier%20exposant%20-%20Grand%20March%C3%A9%20des%20Soldes"
+                href="/participer?type=exhibitor"
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-brand-yellow px-6 font-bold text-neutral-950 transition-colors hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 Demander le dossier exposant

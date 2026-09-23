@@ -42,13 +42,13 @@ export function AudienceSection() {
   return (
     <section id="audience" className="scroll-mt-20 bg-white py-20 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl">
+        <div className="section-intro">
           <p className="text-sm font-black uppercase text-brand-red">Notre public</p>
-          <h2 className="mt-3 font-heading text-4xl font-black leading-tight text-balance uppercase text-neutral-950 sm:text-5xl lg:text-6xl">
+          <h2 className="section-title font-black text-neutral-950">
             Un marché ouvert à
             <span className="block text-brand-red">tout l’écosystème</span>
           </h2>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600">
+          <p className="section-description text-neutral-600">
             Le Grand Marché des Soldes réunit l’offre et la demande pour créer
             de vraies rencontres commerciales et des opportunités durables.
           </p>
